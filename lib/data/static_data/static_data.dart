@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:selaty/core/constant.dart';
 import 'package:selaty/data/model/onBoarding_model.dart';
 
 List<OnBoardingModel> onBoardingList = [
@@ -12,7 +13,7 @@ List<OnBoardingModel> onBoardingList = [
     title: 'عروض طازجه وجوده',
     body: 'جميع العناصر لها نضاره حقيقيه وهي مخصصه لاحتياجاتك',
     image: 'assets/images/3.jpg',
-    color: Colors.green,
+    color: kPrimarColor,
   ),
   OnBoardingModel(
     title: 'تسليم سريع للمنزل',

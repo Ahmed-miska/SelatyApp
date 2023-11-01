@@ -10,9 +10,10 @@ class CustomPageView extends GetView<OnBoardingControllerImp> {
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    bool checkLand =
+        MediaQuery.of(context).orientation == Orientation.landscape;
     Get.put(OnBoardingControllerImp);
     return PageView.builder(
-      
       controller: controller.pageController,
       onPageChanged: (value) {
         controller.onPageChanged(value = value);
@@ -24,31 +25,31 @@ class CustomPageView extends GetView<OnBoardingControllerImp> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
-            SizedBox(height: 50.h),
+            SizedBox(height: checkLand ? null : 50.h),
             Center(
               child: Image.asset(
                 onBoardingList[index].image!,
-                height: 200.h,
+                height: checkLand ? 100.h : 200.h,
               ),
             ),
             SizedBox(
-              height: MediaQuery.of(context).size.height * .1,
+              height: checkLand ? 5.h : 10.h,
             ),
             Text(
               onBoardingList[index].title!,
               style: TextStyle(
-                fontSize: 24.sp,
+                fontSize: checkLand ? 14.sp : 24.sp,
                 fontWeight: FontWeight.bold,
                 color: onBoardingList[index].color!,
               ),
             ),
             SizedBox(
-              height: MediaQuery.of(context).size.height * .01,
+              height: checkLand ? 5.h : 10.h,
             ),
             Text(
               onBoardingList[index].body!,
               style: TextStyle(
-                fontSize: 20.sp,
+                fontSize: checkLand ? 12.sp : 20.sp,
               ),
               textAlign: TextAlign.right,
             )
