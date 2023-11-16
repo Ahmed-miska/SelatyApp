@@ -13,6 +13,7 @@ class CustomBackButton extends StatelessWidget {
       onTap: onTap,
       child: Container(
         decoration: BoxDecoration(
+          color: Colors.white,
           borderRadius: BorderRadius.circular(10.r),
           border: Border.all(width: .5.r, color: Colors.black),
         ),
@@ -21,7 +22,7 @@ class CustomBackButton extends StatelessWidget {
           child: Center(
             child: Icon(
               icon!.icon,
-              size: checkLand ? 14.sp : 18.sp,
+              size: checkLand ? 14 : 20,
             ),
           ),
         ),

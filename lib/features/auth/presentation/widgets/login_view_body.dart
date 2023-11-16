@@ -1,17 +1,19 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:selaty/core/constant.dart';
+import 'package:selaty/features/auth/presentation/change_password_view.dart';
 import 'package:selaty/features/auth/presentation/widgets/custom_button.dart';
 import 'package:selaty/features/auth/presentation/widgets/custom_text_field_input_email.dart';
+import 'package:selaty/features/home/presentation/home_view.dart';
 
 import '../register_view.dart';
 import 'custom_back_button.dart';
 import 'custom_text_field_input_pass.dart';
 
 class LoginViewBody extends StatelessWidget {
-  LoginViewBody({Key? key}) : super(key: key);
-  final TextEditingController? controller = TextEditingController();
+  const LoginViewBody({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     bool checkLand =
@@ -67,22 +69,31 @@ class LoginViewBody extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20.h),
-              const CustomTextFieldInputPassword(),
+              CustomTextFieldInputPassword(
+                text: 'كلمه السر',
+              ),
               SizedBox(height: 10.h),
-              Text(
-                '!! هل نسيت كلمه السر',
-                style: TextStyle(
-                    fontSize: checkLand ? 12.sp : 16.sp,
-                    color: Colors.grey.shade800,
-                    fontWeight: FontWeight.bold),
-                textAlign: TextAlign.right,
+              GestureDetector(
+                onTap: () {
+                  Get.to(() => ChangePasswordView());
+                },
+                child: Text(
+                  '!! هل نسيت كلمه السر',
+                  style: TextStyle(
+                      fontSize: checkLand ? 12.sp : 16.sp,
+                      color: Colors.grey.shade800,
+                      fontWeight: FontWeight.bold),
+                  textAlign: TextAlign.right,
+                ),
               ),
               SizedBox(height: 30.h),
               Center(
                 child: CustomButton(
                   color: kPrimarColor,
                   text: 'تسجيل الدخول',
-                  onTap: () {},
+                  onTap: () {
+                    Get.offAll(() => HomeView());
+                  },
                 ),
               ),
               SizedBox(height: checkLand ? 50.h : 130.h),
@@ -112,7 +123,8 @@ class LoginViewBody extends StatelessWidget {
                     style: TextStyle(fontSize: checkLand ? 12.sp : 18.sp),
                   )
                 ],
-              )
+              ),
+              SizedBox(height: 20.h)
             ],
           ),
         ),

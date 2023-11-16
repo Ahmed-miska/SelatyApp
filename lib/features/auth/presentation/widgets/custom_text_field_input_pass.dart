@@ -4,8 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/constant.dart';
 
 class CustomTextFieldInputPassword extends StatefulWidget {
-  const CustomTextFieldInputPassword({Key? key}) : super(key: key);
-
+  const CustomTextFieldInputPassword({Key? key, required this.text}) : super(key: key);
+ final String text ;
   @override
   State<CustomTextFieldInputPassword> createState() =>
       _CustomTextFieldInputPasswordState();
@@ -63,7 +63,7 @@ class _CustomTextFieldInputPasswordState
                     ),
                   ),
                   suffixIconColor: kPrimarColor,
-                  labelText: 'كلمه السر',
+                  labelText: widget.text,
                   labelStyle: TextStyle(
                       fontSize: checkLand ? 12.sp : 18.sp, color: Colors.grey),
                   border: InputBorder.none,

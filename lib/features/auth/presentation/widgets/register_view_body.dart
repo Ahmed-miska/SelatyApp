@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:selaty/features/auth/presentation/check_phone_view.dart';
 import 'package:selaty/features/auth/presentation/login_view.dart';
 
 import '../../../../core/constant.dart';
@@ -78,12 +79,16 @@ class RegisterViewBody extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20.h),
-              const CustomTextFieldInputPassword(),
+              CustomTextFieldInputPassword(
+                text: 'كلمه السر',
+              ),
               SizedBox(height: checkLand ? 20.h : 30.h),
               CustomButton(
                 color: kPrimarColor,
                 text: 'اشتراك',
-                onTap: () {},
+                onTap: () {
+                  Get.to(() => CheckPhoneView());
+                },
               ),
               SizedBox(
                 height: 10.h,
@@ -140,7 +145,8 @@ class RegisterViewBody extends StatelessWidget {
                     style: TextStyle(fontSize: checkLand ? 12.sp : 18.sp),
                   )
                 ],
-              )
+              ),
+              SizedBox(height: checkLand ? 20.h : 0)
             ],
           ),
         ),
