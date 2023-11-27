@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:selaty/controller/onboardingcontroller.dart';
-import 'package:selaty/data/static_data/static_data.dart';
+import 'package:selaty/data/static_data/onBoardingList.dart';
 
 class CustomPageView extends GetView<OnBoardingControllerImp> {
   const CustomPageView({
@@ -14,10 +14,10 @@ class CustomPageView extends GetView<OnBoardingControllerImp> {
         MediaQuery.of(context).orientation == Orientation.landscape;
     Get.put(OnBoardingControllerImp);
     return PageView.builder(
+      physics: const BouncingScrollPhysics(),
       controller: controller.pageController,
       onPageChanged: (value) {
         controller.onPageChanged(value = value);
-        print(value);
       },
       itemCount: onBoardingList.length,
       itemBuilder: (context, index) => Padding(

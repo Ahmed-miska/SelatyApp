@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:selaty/core/constant.dart';
+import 'package:selaty/core/utils/constants/styles.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton({Key? key, this.color, this.text, this.onTap})
@@ -22,11 +24,8 @@ class CustomButton extends StatelessWidget {
         child: Padding(
           padding: checkLand ? EdgeInsets.all(5.0.r) : EdgeInsets.all(12.0.r),
           child: Center(
-            child: Text(
-              text!,
-              style: TextStyle(
-                  color: Colors.white, fontSize: checkLand ? 12.sp : 18.sp),
-            ),
+            child: Text(text!,
+                style: Styles.textStyle18.copyWith(color: kwhiteColor)),
           ),
         ),
       ),

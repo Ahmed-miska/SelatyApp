@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:selaty/core/utils/constants/styles.dart';
 
 import '../../../../core/constant.dart';
 
@@ -10,8 +11,7 @@ class CustomTextFieldInputEmail extends StatelessWidget {
   final Icon? icon;
   @override
   Widget build(BuildContext context) {
-    bool checkLand =
-        MediaQuery.of(context).orientation == Orientation.landscape;
+    
     return Center(
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: 8.w),
@@ -32,8 +32,7 @@ class CustomTextFieldInputEmail extends StatelessWidget {
                   suffixIcon: icon,
                   suffixIconColor: kPrimarColor,
                   labelText: text,
-                  labelStyle: TextStyle(
-                      fontSize: checkLand ? 12.sp : 18.sp, color: Colors.grey),
+                  labelStyle:  Styles.textStyle18,
                   border: InputBorder.none,
                 ),
               ),

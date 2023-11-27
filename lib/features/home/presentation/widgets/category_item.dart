@@ -1,18 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:selaty/data/static_data/static_data.dart';
+import 'package:selaty/core/utils/constants/styles.dart';
+import 'package:selaty/data/static_data/categoryList.dart';
 import 'package:selaty/features/home/presentation/category_view_items.dart';
 
 class CategoryItem extends StatelessWidget {
-  const CategoryItem({Key? key, this.index}) : super(key: key);
+  const CategoryItem({
+    Key? key,
+    required this.index,
+  }) : super(key: key);
   final int? index;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Get.to(() => CategoryViewItems());
+        Get.to(() => CategoryViewItems(index: index));
       },
       child: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -24,12 +28,12 @@ class CategoryItem extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
-              Spacer(flex: 1),
+              const Spacer(flex: 1),
               Text(
-                categryList[index!].title!,
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                categryList[index!].type!,
+                style: Styles.textStyle20,
               ),
-              Spacer(flex: 2),
+              const Spacer(flex: 2),
               Stack(
                 clipBehavior: Clip.none,
                 alignment: Alignment.bottomCenter,
@@ -38,7 +42,7 @@ class CategoryItem extends StatelessWidget {
                     height: 60,
                     width: 120,
                     child: ClipRRect(
-                      borderRadius: BorderRadius.only(
+                      borderRadius: const BorderRadius.only(
                           bottomLeft: Radius.circular(15),
                           bottomRight: Radius.circular(15)),
                       child: Image.asset(
@@ -50,7 +54,7 @@ class CategoryItem extends StatelessWidget {
                   Positioned(
                     bottom: 35,
                     child: Container(
-                      padding: EdgeInsets.all(5),
+                      padding: const EdgeInsets.all(5),
                       decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(100)),

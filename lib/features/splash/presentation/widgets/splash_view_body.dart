@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:selaty/core/constant.dart';
+import 'package:selaty/core/constants/AssetsManeger.dart';
 import 'package:selaty/features/onBoarding/presentation/onBoarding_view.dart';
 
 class SplashViewBody extends StatefulWidget {
@@ -25,22 +27,22 @@ class _SplashViewBodyState extends State<SplashViewBody> {
         Center(
           child: SizedBox(
             height: 200.h,
-            child: Image.asset('assets/images/1.jpg'),
+            child: Image.asset(Assets.logo),
           ),
         ),
         SizedBox(
           height: 50.h,
         ),
         const CircularProgressIndicator(
-          color: Colors.green,
+          color: kPrimarColor,
         )
       ],
     );
   }
 
   void goToNextView() {
-    Future.delayed(Duration(seconds: 2), () {
-      Get.to(() => OnBoardingView(), transition: Transition.fade);
+    Future.delayed(const Duration(seconds: 2), () {
+      Get.to(() => const OnBoardingView(), transition: Transition.fade);
     });
   }
 }

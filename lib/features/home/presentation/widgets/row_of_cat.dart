@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:selaty/core/constant.dart';
+import 'package:selaty/core/utils/constants/styles.dart';
 
 class RowOfHomeView extends StatelessWidget {
   const RowOfHomeView({Key? key, this.text}) : super(key: key);
@@ -15,18 +17,18 @@ class RowOfHomeView extends StatelessWidget {
             children: [
               Text(
                 'مشاهده الكل',
-                style: TextStyle(fontSize: 15, color: Colors.grey),
+                style: Styles.textStyle16.copyWith(color: kGreykColor),
               ),
-              Icon(
+              const Icon(
                 Icons.arrow_forward_ios,
                 size: 12,
               )
             ],
           ),
-          Spacer(),
+          const Spacer(),
           Text(
             text!,
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+            style: Styles.textStyle22.copyWith(fontWeight: FontWeight.bold),
           ),
         ],
       ),

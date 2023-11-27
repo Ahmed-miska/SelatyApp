@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:selaty/core/utils/constants/styles.dart';
 
 class CustomExternalLogin extends StatelessWidget {
   const CustomExternalLogin({Key? key, this.text, this.icon, this.color})
@@ -34,7 +35,7 @@ class CustomExternalLogin extends StatelessWidget {
           ),
           Text(
             text!,
-            style: TextStyle(color: color, fontSize: checkLand ? 10.sp : 16.sp),
+            style: Styles.textStyle18,
           ),
         ],
       ),

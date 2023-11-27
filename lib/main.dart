@@ -10,15 +10,17 @@ void main() {
 class Selaty extends StatelessWidget {
   const Selaty({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       minTextAdapt: true,
       splitScreenMode: true,
       child: GetMaterialApp(
+        theme: ThemeData(
+            scaffoldBackgroundColor: const Color(0xFFFFFFFF),
+            textTheme: const TextTheme()),
         debugShowCheckedModeBanner: false,
-        home: SplashView(),
+        home: const SplashView(),
       ),
     );
   }

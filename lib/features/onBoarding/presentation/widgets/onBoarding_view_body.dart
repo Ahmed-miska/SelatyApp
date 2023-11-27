@@ -12,7 +12,7 @@ class OnBoardingViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Get.put(OnBoardingControllerImp());
-    return Column(
+    return const Column(
       children: [
         Expanded(
           flex: 4,

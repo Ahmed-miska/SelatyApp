@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:selaty/core/constants/AssetsManeger.dart';
+import 'package:selaty/core/utils/constants/styles.dart';
 
 import '../../../auth/presentation/widgets/custom_back_button.dart';
 
@@ -13,7 +15,7 @@ class HomeViewAppBar extends StatelessWidget {
       child: Row(
         children: [
           CustomBackButton(
-            icon: Icon(
+            icon: const Icon(
               Icons.calendar_month_outlined,
             ),
             onTap: () {},
@@ -21,18 +23,18 @@ class HomeViewAppBar extends StatelessWidget {
           const Spacer(),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 10.w),
-            child: Column(
+            child: const Column(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Text(
                   'احمد مسكه',
-                  style: TextStyle(fontSize: 16),
+                  style: Styles.textStyle18,
                 ),
                 Row(
                   children: [
                     Text(
                       'الباجور -المنوفيه',
-                      style: TextStyle(fontSize: 12),
+                      style: Styles.textStyle18,
                     ),
                     Icon(
                       Icons.location_on_outlined,
@@ -45,7 +47,7 @@ class HomeViewAppBar extends StatelessWidget {
             ),
           ),
           const CircleAvatar(
-            backgroundImage: AssetImage('assets/images/1.jpg'),
+            backgroundImage: AssetImage(Assets.profile),
             // child: Image.asset('assets/images/1.jpg'),
           )
         ],

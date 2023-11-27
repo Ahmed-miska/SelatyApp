@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:selaty/core/constant.dart';
+import 'package:selaty/core/constants/AssetsManeger.dart';
 import 'package:selaty/features/auth/presentation/login_view.dart';
 import 'package:selaty/features/auth/presentation/register_view.dart';
 
@@ -22,13 +23,13 @@ class AuthViewBody extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Image.asset(
-              'assets/images/5.jpg',
+              Assets.hlogo,
               width: checkLand ? 100.w : 250.w,
             ),
             SizedBox(height: checkLand ? 30.h : 50.h),
             CustomButton(
               onTap: () {
-                Get.to(() => LoginView());
+                Get.to(() => const LoginView());
               },
               text: 'تسجيل الدخول',
               color: Colors.red,
@@ -36,7 +37,7 @@ class AuthViewBody extends StatelessWidget {
             SizedBox(height: 20.h),
             CustomButton(
               onTap: () {
-                Get.to(() => RegisterView());
+                Get.to(() => const RegisterView());
               },
               text: 'انشئ حساب',
               color: kPrimarColor,

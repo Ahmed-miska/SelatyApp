@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import 'package:selaty/data/static_data/onBoardingList.dart';
 import 'package:selaty/features/auth/presentation/auth_view.dart';
 
-import '../data/static_data/static_data.dart';
 
 abstract class OnBoardingController extends GetxController {
   next();
@@ -16,7 +16,7 @@ class OnBoardingControllerImp extends OnBoardingController {
   next() {
     currentPage++;
     if (currentPage > onBoardingList.length - 1) {
-      Get.to(()=>AuthView());
+      Get.to(()=>const AuthView());
     } else {
       pageController.animateToPage(
         currentPage,

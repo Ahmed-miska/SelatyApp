@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 
@@ -15,10 +14,10 @@ final  TextEditingController? controller;
       controller: controller,
       textAlign: TextAlign.left,
       dropdownIconPosition: IconPosition.leading,
-      decoration: InputDecoration(
+      decoration: const InputDecoration(
         // hintText: AppStrings.phoneNumberHint,
         border: UnderlineInputBorder(),
-        suffixIcon: const Icon(
+        suffixIcon: Icon(
           Icons.highlight_remove_sharp,
           color: Colors.green,
         ),

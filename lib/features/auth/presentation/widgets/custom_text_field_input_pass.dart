@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:selaty/core/utils/constants/styles.dart';
 
 import '../../../../core/constant.dart';
 
@@ -64,8 +65,7 @@ class _CustomTextFieldInputPasswordState
                   ),
                   suffixIconColor: kPrimarColor,
                   labelText: widget.text,
-                  labelStyle: TextStyle(
-                      fontSize: checkLand ? 12.sp : 18.sp, color: Colors.grey),
+                  labelStyle:  Styles.textStyle18,
                   border: InputBorder.none,
                 ),
               ),

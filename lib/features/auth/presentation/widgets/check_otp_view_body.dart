@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:selaty/core/utils/constants/styles.dart';
 
 import 'custom_otp_text_field.dart';
 
@@ -22,7 +23,7 @@ class CheckOTPViewBody extends StatelessWidget {
               children: [
                 IconButton(
                   alignment: Alignment.centerLeft,
-                  padding: EdgeInsets.all(0),
+                  padding: const EdgeInsets.all(0),
                   icon: const Icon(
                     Icons.arrow_back_ios,
                   ),
@@ -31,17 +32,12 @@ class CheckOTPViewBody extends StatelessWidget {
                     Get.back();
                   },
                 ),
-                Center(
-                  child: Text(
-                    'التحقق من الهاتف',
-                    style: TextStyle(
-                      fontSize: checkLand ? 14.sp : 22.sp,
-                    ),
-                  ),
+                const Center(
+                  child: Text('التحقق من الهاتف', style: Styles.textStyle16),
                 ),
                 IconButton(
                   alignment: Alignment.centerRight,
-                  padding: EdgeInsets.all(0),
+                  padding: const EdgeInsets.all(0),
                   icon: const Icon(
                     Icons.calendar_month_outlined,
                   ),
@@ -56,27 +52,28 @@ class CheckOTPViewBody extends StatelessWidget {
               children: [
                 Text(
                   'ادخل رمز otp الخاص بك هنا',
-                  style: TextStyle(
-                      fontSize: checkLand ? 14.sp : 16.sp,
-                      color: Colors.grey.shade700),
+                  style: Styles.textStyle18.copyWith(
+                    color: Colors.grey.shade700,
+                  ),
                   textAlign: TextAlign.right,
                 ),
                 SizedBox(height: checkLand ? 20.h : 50.h),
-                CustomOTPTextField(),
+                const CustomOTPTextField(),
                 SizedBox(height: checkLand ? 20.h : 30.h),
                 Text(
                   'لم يصل الكود؟',
-                  style: TextStyle(
-                      fontSize: checkLand ? 12.sp : 14.sp,
-                      color: Colors.grey.shade700),
+                  style: Styles.textStyle18.copyWith(
+                    color: Colors.grey.shade700,
+                  ),
                   textAlign: TextAlign.right,
                 ),
                 GestureDetector(
                   onTap: () {},
                   child: Text(
                     'اعاده ارسال رمز جديد',
-                    style: TextStyle(
-                        fontSize: checkLand ? 14.sp : 18.sp, color: Colors.red),
+                    style: Styles.textStyle18.copyWith(
+                      color: Colors.red,
+                    ),
                     textAlign: TextAlign.right,
                   ),
                 ),

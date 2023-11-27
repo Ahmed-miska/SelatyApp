@@ -1,11 +1,17 @@
-
 import 'dart:ui';
 
 class CategoryModel {
-  final String? title;
+  final String? type;
   final String? image;
   final String? logo;
   final Color? color;
+  final int catId;
 
-  CategoryModel({this.title, this.image, this.logo,this.color});
+  CategoryModel({
+    required this.catId,
+    this.type,
+    this.image,
+    this.logo,
+    this.color,
+  });
 }

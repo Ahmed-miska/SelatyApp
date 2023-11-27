@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:selaty/controller/onboardingcontroller.dart';
-import '../../../../data/static_data/static_data.dart';
+import 'package:selaty/data/static_data/onBoardingList.dart';
 
 class CustomArrowButton extends StatelessWidget {
   const CustomArrowButton({Key? key}) : super(key: key);
@@ -22,7 +22,7 @@ class CustomArrowButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(50.r),
             color: onBoardingList[controller.currentPage].color,
           ),
-          child: Icon(
+          child: const Icon(
             Icons.arrow_forward,
             color: Colors.white,
           ),

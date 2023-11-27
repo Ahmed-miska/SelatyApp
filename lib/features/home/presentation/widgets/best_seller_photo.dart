@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:selaty/data/static_data/static_data.dart';
+import 'package:selaty/data/static_data/bestSellerPhotosList.dart';
 
 import '../../../../controller/home_view_controller.dart';
 
@@ -13,7 +13,7 @@ class BestSellerPhotos extends StatelessWidget {
     Get.put(HomeViewContrrolerImp());
     return Padding(
       padding: EdgeInsets.symmetric(vertical: 5.h),
-      child: Container(
+      child: SizedBox(
         height: 130.h,
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
@@ -26,6 +26,7 @@ class BestSellerPhotos extends StatelessWidget {
                 child: Image.asset(
                   bestSellerPhotosList[index].image!,
                   fit: BoxFit.cover,
+                  width: 200,
                 ),
               ),
             );

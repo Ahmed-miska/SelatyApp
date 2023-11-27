@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:selaty/controller/onboardingcontroller.dart';
+import 'package:selaty/data/static_data/onBoardingList.dart';
 
-import '../../../../data/static_data/static_data.dart';
 
 class CustomDotController extends StatelessWidget {
   const CustomDotController({Key? key}) : super(key: key);
@@ -19,6 +19,7 @@ class CustomDotController extends StatelessWidget {
             (i) {
               return AnimatedContainer(
                 margin: EdgeInsets.all(3.r),
+                // ignore: prefer_const_constructors
                 duration: Duration(milliseconds: 1),
                 height: 7.r,
                 width: controller.currentPage == i ? 20.r : 7.r,

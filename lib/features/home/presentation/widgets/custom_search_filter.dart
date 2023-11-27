@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
+import 'package:selaty/core/utils/constants/styles.dart';
 import 'package:selaty/features/home/presentation/widgets/alert_dilog.dart';
 
 class CustomSearchBar extends StatelessWidget {
@@ -26,12 +26,12 @@ class CustomSearchBar extends StatelessWidget {
                     border: InputBorder.none,
                     isDense: true,
                     hintText: '...البحث عن المنتجات',
-                    hintStyle: TextStyle(fontSize: 16, color: Colors.grey),
+                    hintStyle:  Styles.textStyle18,
                     suffixIcon: GestureDetector(
                       onTap: () {
                         controller.clear();
                       },
-                      child: Icon(
+                      child: const Icon(
                         Icons.close,
                         size: 18,
                         color: Colors.black,
@@ -39,7 +39,7 @@ class CustomSearchBar extends StatelessWidget {
                     ),
                     prefixIcon: GestureDetector(
                       onTap: () {},
-                      child: Icon(
+                      child: const Icon(
                         Icons.search,
                         size: 18,
                         color: Colors.black,
@@ -54,7 +54,7 @@ class CustomSearchBar extends StatelessWidget {
               onTap: () {
                 showDialog(
                   builder: (context) {
-                    return AleartDiloug();
+                    return const AleartDiloug();
                   },
                   context: context,
                 );
@@ -64,7 +64,7 @@ class CustomSearchBar extends StatelessWidget {
                     borderRadius: BorderRadius.circular(5), color: Colors.red),
                 child: Padding(
                   padding: EdgeInsets.all(8.0.r),
-                  child: Icon(
+                  child: const Icon(
                     Icons.filter_list_outlined,
                     color: Colors.white,
                     size: 25,

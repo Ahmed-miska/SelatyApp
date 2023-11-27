@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:selaty/core/constant.dart';
+import 'package:selaty/core/utils/constants/styles.dart';
 import 'package:selaty/features/auth/presentation/widgets/custom_button.dart';
 import 'package:selaty/features/auth/presentation/widgets/custom_text_field_input_pass.dart';
 
@@ -22,7 +23,7 @@ class ChangePasswordViewBody extends StatelessWidget {
               children: [
                 IconButton(
                   alignment: Alignment.centerLeft,
-                  padding: EdgeInsets.all(0),
+                  padding: const EdgeInsets.all(0),
                   icon: const Icon(
                     Icons.arrow_back_ios,
                   ),
@@ -31,15 +32,13 @@ class ChangePasswordViewBody extends StatelessWidget {
                     Get.back();
                   },
                 ),
-                Text(
+                const Text(
                   'تغيير  كلمه المرور',
-                  style: TextStyle(
-                    fontSize: checkLand ? 14.sp : 22.sp,
-                  ),
+                  style: Styles.textStyle20,
                 ),
                 IconButton(
                   alignment: Alignment.centerRight,
-                  padding: EdgeInsets.all(0),
+                  padding: const EdgeInsets.all(0),
                   icon: const Icon(
                     Icons.calendar_month_outlined,
                   ),
@@ -51,18 +50,15 @@ class ChangePasswordViewBody extends StatelessWidget {
             SizedBox(height: checkLand ? 5.h : 10.h),
             Column(
               children: [
-                Text(
-                  'ادخل كلمه المرور الجديده',
-                  style: TextStyle(
-                      fontSize: checkLand ? 14.sp : 16.sp,
-                      color: Colors.grey.shade600),
-                ),
+                Text('ادخل كلمه المرور الجديده',
+                    style: Styles.textStyle16
+                        .copyWith(color: Colors.grey.shade600)),
                 SizedBox(height: checkLand ? 15.h : 100.h),
-                CustomTextFieldInputPassword(
+                const CustomTextFieldInputPassword(
                   text: 'كلمه المرور الحاليه',
                 ),
                 SizedBox(height: checkLand ? 15.h : 30.h),
-                CustomTextFieldInputPassword(
+                const CustomTextFieldInputPassword(
                   text: 'كلمه مرور جديده',
                 ),
                 SizedBox(height: checkLand ? 30.h : 50.h),

@@ -1,8 +1,9 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:selaty/core/constant.dart';
+import 'package:selaty/core/constants/AssetsManeger.dart';
+import 'package:selaty/core/utils/constants/styles.dart';
 import 'package:selaty/features/auth/presentation/change_password_view.dart';
 import 'package:selaty/features/auth/presentation/widgets/custom_button.dart';
 import 'package:selaty/features/auth/presentation/widgets/custom_text_field_input_email.dart';
@@ -20,7 +21,7 @@ class LoginViewBody extends StatelessWidget {
         MediaQuery.of(context).orientation == Orientation.landscape;
     return Expanded(
       child: SingleChildScrollView(
-        // physics: const BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         child: Padding(
           padding: checkLand
               ? EdgeInsets.symmetric(horizontal: 20.w)
@@ -32,7 +33,7 @@ class LoginViewBody extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   CustomBackButton(
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.arrow_back_ios,
                     ),
                     onTap: () {
@@ -55,7 +56,7 @@ class LoginViewBody extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 50.w),
                 child: Center(
                   child: Image.asset(
-                    'assets/images/5.jpg',
+                    Assets.hlogo,
                     width: checkLand ? 100.w : 300.w,
                   ),
                 ),
@@ -69,20 +70,17 @@ class LoginViewBody extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20.h),
-              CustomTextFieldInputPassword(
+              const CustomTextFieldInputPassword(
                 text: 'كلمه السر',
               ),
               SizedBox(height: 10.h),
               GestureDetector(
                 onTap: () {
-                  Get.to(() => ChangePasswordView());
+                  Get.to(() => const ChangePasswordView());
                 },
-                child: Text(
+                child: const Text(
                   '!! هل نسيت كلمه السر',
-                  style: TextStyle(
-                      fontSize: checkLand ? 12.sp : 16.sp,
-                      color: Colors.grey.shade800,
-                      fontWeight: FontWeight.bold),
+                  style: Styles.textStyle18,
                   textAlign: TextAlign.right,
                 ),
               ),
@@ -92,7 +90,7 @@ class LoginViewBody extends StatelessWidget {
                   color: kPrimarColor,
                   text: 'تسجيل الدخول',
                   onTap: () {
-                    Get.offAll(() => HomeView());
+                    Get.offAll(() => const HomeView());
                   },
                 ),
               ),
@@ -103,13 +101,13 @@ class LoginViewBody extends StatelessWidget {
                   GestureDetector(
                     onTap: () {
                       Get.off(
-                          transition: Transition.fade, () => RegisterView());
+                          transition: Transition.fade, () => const RegisterView());
                     },
                     child: Row(
                       children: [
-                        Text(
+                        const Text(
                           'انشاء حساب جديد ',
-                          style: TextStyle(fontSize: checkLand ? 12.sp : 18.sp),
+                          style: Styles.textStyle18,
                         ),
                         Icon(
                           Icons.arrow_right,
@@ -118,9 +116,9 @@ class LoginViewBody extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Text(
+                  const Text(
                     'ليس لديك حساب ',
-                    style: TextStyle(fontSize: checkLand ? 12.sp : 18.sp),
+                    style: Styles.textStyle18,
                   )
                 ],
               ),

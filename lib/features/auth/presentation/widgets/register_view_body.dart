@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:selaty/core/utils/constants/styles.dart';
 import 'package:selaty/features/auth/presentation/check_phone_view.dart';
 import 'package:selaty/features/auth/presentation/login_view.dart';
-
 import '../../../../core/constant.dart';
 import 'custom_back_button.dart';
 import 'custom_button.dart';
@@ -54,16 +54,12 @@ class RegisterViewBody extends StatelessWidget {
               ),
               Text(
                 'أنشاء حساب جديد',
-                style: TextStyle(
-                    fontSize: checkLand ? 18.sp : 32.sp,
-                    color: Colors.grey.shade800),
+                style: Styles.textStyle24.copyWith(color: kBlackColor),
                 textAlign: TextAlign.right,
               ),
               Text(
                 'ادخل بياناتك لأنشاء حساب',
-                style: TextStyle(
-                    fontSize: checkLand ? 10.sp : 18.sp,
-                    color: Colors.grey.shade500),
+                style: Styles.textStyle18.copyWith(color: kGreykColor),
                 textAlign: TextAlign.right,
               ),
               SizedBox(height: checkLand ? 12.h : 30.h),
@@ -79,7 +75,7 @@ class RegisterViewBody extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20.h),
-              CustomTextFieldInputPassword(
+              const CustomTextFieldInputPassword(
                 text: 'كلمه السر',
               ),
               SizedBox(height: checkLand ? 20.h : 30.h),
@@ -87,22 +83,22 @@ class RegisterViewBody extends StatelessWidget {
                 color: kPrimarColor,
                 text: 'اشتراك',
                 onTap: () {
-                  Get.to(() => CheckPhoneView());
+                  Get.to(() => const CheckPhoneView());
                 },
               ),
               SizedBox(
                 height: 10.h,
               ),
-              Center(
+              const Center(
                 child: Text(
                   'او اشترك مع',
-                  style: TextStyle(fontSize: checkLand ? 12.sp : 18.sp),
+                  style: Styles.textStyle18,
                 ),
               ),
               SizedBox(
                 height: checkLand ? 5.h : 10.h,
               ),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   CustomExternalLogin(
@@ -125,13 +121,13 @@ class RegisterViewBody extends StatelessWidget {
                 children: [
                   GestureDetector(
                     onTap: () {
-                      Get.off(transition: Transition.fade, () => LoginView());
+                      Get.off(transition: Transition.fade, () => const LoginView());
                     },
                     child: Row(
                       children: [
-                        Text(
+                        const Text(
                           'تسجيل الدخول',
-                          style: TextStyle(fontSize: checkLand ? 12.sp : 18.sp),
+                          style: Styles.textStyle18,
                         ),
                         Icon(
                           Icons.arrow_right,
@@ -140,9 +136,9 @@ class RegisterViewBody extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Text(
+                  const Text(
                     'لديك حساب بالفعل',
-                    style: TextStyle(fontSize: checkLand ? 12.sp : 18.sp),
+                    style: Styles.textStyle18,
                   )
                 ],
               ),

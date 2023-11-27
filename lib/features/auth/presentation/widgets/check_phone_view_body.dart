@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:selaty/core/constant.dart';
+import 'package:selaty/core/utils/constants/styles.dart';
 import 'package:selaty/features/auth/presentation/check_otp_view.dart';
 import 'package:selaty/features/auth/presentation/widgets/custom_button.dart';
 
@@ -24,7 +25,7 @@ class CheckPhoneViewBody extends StatelessWidget {
               children: [
                 IconButton(
                   alignment: Alignment.centerLeft,
-                  padding: EdgeInsets.all(0),
+                  padding: const EdgeInsets.all(0),
                   icon: const Icon(
                     Icons.arrow_back_ios,
                   ),
@@ -33,16 +34,11 @@ class CheckPhoneViewBody extends StatelessWidget {
                     Get.back();
                   },
                 ),
-                Spacer(),
-                Text(
-                  'تحقق من رقم الهاتف',
-                  style: TextStyle(
-                    fontSize: checkLand ? 14.sp : 22.sp,
-                  ),
-                ),
+                const Spacer(),
+                const Text('تحقق من رقم الهاتف', style: Styles.textStyle18),
                 IconButton(
                   alignment: Alignment.centerRight,
-                  padding: EdgeInsets.all(0),
+                  padding: const EdgeInsets.all(0),
                   icon: const Icon(
                     Icons.calendar_month_outlined,
                   ),
@@ -52,13 +48,11 @@ class CheckPhoneViewBody extends StatelessWidget {
               ],
             ),
             SizedBox(height: checkLand ? 5.h : 10.h),
-            Column(
+            const Column(
               children: [
                 Text(
                   'لقد ارسلنا اليك رساله قصيره تحتوي علي رمز ',
-                  style: TextStyle(
-                      fontSize: checkLand ? 14.sp : 16.sp,
-                      color: Colors.grey.shade700),
+                  style: Styles.textStyle18,
                   textAlign: TextAlign.right,
                 ),
               ],
@@ -72,10 +66,10 @@ class CheckPhoneViewBody extends StatelessWidget {
               controller: controller,
               textAlign: TextAlign.left,
               dropdownIconPosition: IconPosition.leading,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 // hintText: AppStrings.phoneNumberHint,
                 border: UnderlineInputBorder(),
-                suffixIcon: const Icon(
+                suffixIcon: Icon(
                   Icons.highlight_remove_sharp,
                   color: Colors.green,
                 ),
@@ -85,8 +79,8 @@ class CheckPhoneViewBody extends StatelessWidget {
             SizedBox(height: 50.h),
             CustomButton(
               onTap: () {
-                print(controller);
-                Get.to(CheckOTPView());
+                
+                Get.to(const CheckOTPView());
               },
               color: kPrimarColor,
               text: 'تاكيد',

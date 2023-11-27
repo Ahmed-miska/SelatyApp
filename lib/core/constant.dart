@@ -1,5 +1,7 @@
+import 'package:flutter/material.dart';
 
-import 'package:flutter/animation.dart';
-import 'package:flutter/cupertino.dart';
-
-final Color kPrimarColor = Color(0xff2AC17E);
+const Color kPrimarColor = Colors.green;
+const Color kwhiteColor = Colors.white;
+const Color kBlackColor = Colors.black;
+const Color kGreykColor = Colors.grey;
+const Color kRedkColor = Colors.red;
