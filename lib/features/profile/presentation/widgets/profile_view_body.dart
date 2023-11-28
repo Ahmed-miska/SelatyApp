@@ -13,7 +13,7 @@ class ProfileViewBody extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: ListView(
-        physics: const BouncingScrollPhysics(),
+        // physics: const BouncingScrollPhysics(),
         children: [
           Column(
             children: [
@@ -45,7 +45,7 @@ class ProfileViewBody extends StatelessWidget {
                         alignment: Alignment.bottomCenter,
                         children: [
                           Container(
-                              height: 150,
+                              height: 140,
                               alignment: Alignment.bottomCenter,
                               width: MediaQuery.of(context).size.width * .9,
                               decoration: BoxDecoration(
@@ -93,8 +93,8 @@ class ProfileViewBody extends StatelessWidget {
                                 children: [
                                   const CircleAvatar(
                                     radius: 50,
-                                    backgroundImage: AssetImage(
-                                        'assets/images/profile.jpg'),
+                                    backgroundImage:
+                                        AssetImage('assets/images/profile.jpg'),
                                   ),
                                   Positioned(
                                     right: 0,
@@ -138,7 +138,7 @@ class ProfileViewBody extends StatelessWidget {
                           //   ),
                           // )
                         ],
-                      )
+                      ),
                     ],
                   ),
                   LayoutBuilder(
@@ -156,6 +156,7 @@ class ProfileViewBody extends StatelessWidget {
               ),
             ],
           ),
+          const SizedBox(height: 10),
         ],
       ),
     );

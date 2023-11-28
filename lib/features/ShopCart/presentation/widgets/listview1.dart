@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
+import 'package:selaty/core/constant.dart';
 import 'package:selaty/core/utils/constants/styles.dart';
 import 'package:selaty/data/static_data/bestSellerList.dart';
 
-
 class ListView1 extends StatelessWidget {
-  const ListView1({ Key? key }) : super(key: key);
+  const ListView1({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +50,7 @@ class ListView1 extends StatelessWidget {
                               )),
                           const Text(
                             "2",
-                            style:  Styles.textStyle18,
+                            style: Styles.textStyle18,
                           ),
                           IconButton(
                               padding: EdgeInsets.zero,
@@ -72,11 +72,12 @@ class ListView1 extends StatelessWidget {
                         children: [
                           Text(
                             "\$ 3 * ${bestSellerList[index].weight}",
-                            style:  Styles.textStyle18,
+                            style: Styles.textStyle18
+                                .copyWith(color: kPrimarColor),
                           ),
                           Text(
                             bestSellerList[index].title,
-                            style:  Styles.textStyle18,
+                            style: Styles.textStyle18,
                           ),
                           const Text("Kg 1 ")
                         ],

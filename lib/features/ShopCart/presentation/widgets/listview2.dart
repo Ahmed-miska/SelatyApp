@@ -8,7 +8,7 @@ class ListView2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      physics: const BouncingScrollPhysics(),
+      // physics: NeverScrollableScrollPhysics(),
       children: [
         Padding(
           padding: const EdgeInsets.only(left: 10, right: 10, top: 12),

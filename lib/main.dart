@@ -17,7 +17,7 @@ class Selaty extends StatelessWidget {
       splitScreenMode: true,
       child: GetMaterialApp(
         theme: ThemeData(
-            scaffoldBackgroundColor: const Color(0xFFFFFFFF),
+            scaffoldBackgroundColor: Colors.grey.shade50,
             textTheme: const TextTheme()),
         debugShowCheckedModeBanner: false,
         home: const SplashView(),

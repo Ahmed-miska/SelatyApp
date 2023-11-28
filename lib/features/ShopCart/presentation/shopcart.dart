@@ -10,6 +10,7 @@ class SearchView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+          toolbarHeight: 40,
           automaticallyImplyLeading: false,
           elevation: 0,
           backgroundColor: Theme.of(context).scaffoldBackgroundColor,

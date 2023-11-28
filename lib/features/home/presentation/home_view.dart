@@ -59,6 +59,7 @@ class _HomeViewState extends State<HomeView> {
           TabItem(
             icon: Icon(
               Icons.shopping_cart_outlined,
+              
               color: _selectedPageIndex == 0 ? Colors.green : Colors.black,
             ),
             title: 'Search',

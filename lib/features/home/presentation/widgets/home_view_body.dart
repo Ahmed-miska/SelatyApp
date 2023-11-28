@@ -159,6 +159,9 @@ class HomeViewBody extends StatelessWidget {
                 },
               ),
             ),
+            const SizedBox(
+              height: 20,
+            ),
             // Container(
             //   height:
             //       MediaQuery.of(context).orientation == Orientation.landscape

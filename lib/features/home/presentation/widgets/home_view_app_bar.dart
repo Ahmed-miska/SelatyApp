@@ -34,7 +34,7 @@ class HomeViewAppBar extends StatelessWidget {
                   children: [
                     Text(
                       'الباجور -المنوفيه',
-                      style: Styles.textStyle18,
+                      style: Styles.textStyle14,
                     ),
                     Icon(
                       Icons.location_on_outlined,

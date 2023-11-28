@@ -54,6 +54,6 @@ class _AleartDilougState extends State<AleartDiloug> {
         ),
       ],
     );
-    ;
+    
   }
 }
